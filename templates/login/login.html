@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../../static/style.css">
+</head>
+<body>
+    <div class="fon">
+        <div class="core">
+            <div class="pic"></div>
+            <form method="post">
+                {% csrf_token %}
+            <p class="dobro">Добро пожаловать</p>
+            <div>
+                <p class="loginp">Введите логин: {{ form.username }}</p>
+            </div>
+            <div>
+                <p class="pass">Введите пароль: {{ form.password }}</p>
+            </div>
+                <div>
+                <input class="butt" type="submit" width="214" height="59" value="Войти">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

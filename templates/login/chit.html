@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail</title>
+    <link rel="stylesheet" href="../../static/style.css">
+</head>
+<body>
+    <div class="fon">
+        <div class="mailpic"></div>
+        <div class="mailcore">
+            <div class="mailback">
+                <div class="topbarcore">
+                    <div class="topbarback"></div>
+                </div>  
+                <div class="letterscore">
+                    <div class="letter">
+                        <div class="lettcore">
+                            <li>От: shar@bt.ru Письмо: Идёт Цифровой прорыв. Зайдите на сайт, ознакомьтесь Тэги: мероприятие, новости</li>
+                        </div>
+                        <br />
+                        <div class="lettcore">
+                            <li>От: shar@bt.ru Письмо: Да Тэги: оповещения</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="groupscore">
+            <div class="groupsmain">
+                <div class="categhead">
+                    <a href="{% url 'mail' %}" class="categorylink">Категории</a>
+                </div>
+                <br />
+                <div class="categother">
+                    <a href="{% url 'razv' %}" class="link">Развернутый ответ</a>
+                </div>
+                <br />
+                <div class="categother">
+                    <a href="{% url 'korO' %}" class="link">Короткий ответ</a>
+                </div>
+                <br />
+                <div class="categother">
+                    <a href="#" class="link">Прочитать</a>
+                </div>
+                <br />
+                <div class="categother">
+                    <a href="{% url 'rass' %}" class="link">Рассылки</a>
+                </div>
+                <br />
+                <div class="categother">
+                    <a href="{% url 'spam' %}" class="link">Спам</a>
+                </div>
+            </div>
+        </div>
+        <div class="writecore">
+            <div class="writemain">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div>
+                        <input class="writeaddress" type="text" placeholder="Получатель" name="address" font-family>
+                    </div>
+                    <div>
+                        <input class="writetheme" type="text" placeholder="Тема" name="theme">
+                    </div>
+                    <div>
+                        <textarea class="writeplace" name="letter"> </textarea>
+                    </div>
+                    <div>
+                        <button class="sendbutton" type="submit"><a class="txtinbut">Отправить</a></button>
+                    </div>
+                </form>
+        </div>
+        </div>
+        <div class="suggcore">
+            <div class="suggmain">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
